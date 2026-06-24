@@ -4,7 +4,7 @@ import glob
 import os
 import matplotlib.pyplot as plt
 
-def calibrate(ShowPics=True):
+def calibrate(ShowPics=True,Camera_Index=0):
     #ReadImage
     root = os.getcwd()
     calibrationDir = os.path.join(root,"ChessImages")
@@ -22,7 +22,8 @@ def calibrate(ShowPics=True):
     #FindCorners
     # for curImgPath in imagePathlist:
     #     print(curImgPath)
-    cam = cv.VideoCapture(1)
+    
+    cam = cv.VideoCapture(Camera_Index)
     img_index = 0
     while True:
         ret, imgBGR = cam.read()
@@ -40,16 +41,17 @@ def calibrate(ShowPics=True):
             # worldPtsList.append(worldPtsCur)
             # cornersRefind = cv.cornerSubPix(imgGray,cornersOrg,(11,11),(-1,-1),termCriteria)
             # imgPtsList.append(cornersRefind)
-            if ShowPics:
-                cv.drawChessboardCorners(imgBGR,(nRows,nCols),cornersRefind,cornersFound)
-                cv.imshow("Chessboard",imgBGR)
-                cv.waitKey(300)
+            # if ShowPics:
+            #     cv.drawChessboardCorners(imgBGR,(nRows,nCols),cornersRefind,cornersFound)
+            #     cv.imshow("Chessboard",imgBGR)
+            #     cv.waitKey(300)
         # if cv.waitKey(1) == ord('s'):
         #     cv.imwrite(img_index+'.jpg')
         #     img_index += 1
         if cv.waitKey(1) == ord('q'):
             break
     cv.destroyAllWindows()
+    exit()
 
 
     #Calibrait
