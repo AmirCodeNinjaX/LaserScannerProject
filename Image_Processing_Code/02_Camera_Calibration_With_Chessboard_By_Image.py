@@ -4,6 +4,7 @@ import glob
 import os
 import matplotlib.pyplot as plt
 import configparser
+from _00_Camera_Calibration_Modules import save_camera_config
 
 def calibrate(ShowPics=True):
     #ReadImage
@@ -65,26 +66,6 @@ def calibrate(ShowPics=True):
 def runCalibration():
     calibrate(ShowPics=True)
 
-
-def save_camera_config(filename, camera_matrix, dist_coeffs=None):
-    config = configparser.ConfigParser()
-    
-    # Convert matrix to string (comma-separated for readability)
-    # We use flatten to make it a single line or keep it as is
-    matrix_str = ','.join(map(str, camera_matrix.flatten()))
-    
-    config['CAMERA_PARAMS'] = {
-        'intrinsic_matrix': matrix_str,
-        'rows': str(camera_matrix.shape[0]),
-        'cols': str(camera_matrix.shape[1])
-    }
-    
-    if dist_coeffs is not None:
-        config['CAMERA_PARAMS']['distortion_coefficients'] = ','.join(map(str, dist_coeffs.flatten()))
-
-    with open(filename, 'w') as configfile:
-        config.write(configfile)
-    print(f"Configuration saved to {filename}")
 
 if __name__ == '__main__':
     runCalibration()

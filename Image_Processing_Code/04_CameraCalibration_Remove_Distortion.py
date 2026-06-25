@@ -4,21 +4,7 @@ import io
 import os
 import cv2 as cv
 import matplotlib.pyplot as plt
-
-def load_camera_config(filename):
-    config = configparser.ConfigParser()
-    config.read(filename)
-    
-    # Retrieve string and convert back to numpy array
-    matrix_str = config.get('CAMERA_PARAMS', 'intrinsic_matrix')
-    rows = config.getint('CAMERA_PARAMS', 'rows')
-    cols = config.getint('CAMERA_PARAMS', 'cols')
-    dist_Coeff = config.get('CAMERA_PARAMS', 'distortion_coefficients')
-    
-    matrix = np.fromstring(matrix_str, sep=',').reshape(rows, cols)
-    if dist_Coeff is not None:
-        dist_Coeff = np.fromstring(dist_Coeff, sep=',')
-    return matrix, dist_Coeff
+from _00_Camera_Calibration_Modules import load_camera_config
 
 
 def RemoveDistotion(camMatirx, dist_Coeff,Camera_Index=0):
