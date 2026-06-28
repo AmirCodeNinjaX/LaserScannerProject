@@ -13,5 +13,5 @@ Today is **"sunday-june 21,2026 (1405/03/31)"**,<br>two amir (Amir Mohammad and 
 > "I say to everyone who is reading this text that **Live Long Programmers**...!"
 
 ---
-![Programers](Additional/.MD%20Files/01_For_Keepsake.jpg)
+![Programers](/Image_Processing_Code/Additional/.MD%20Files/01_For_Keepsake.jpg)
 *Happy Coding! 💻*
