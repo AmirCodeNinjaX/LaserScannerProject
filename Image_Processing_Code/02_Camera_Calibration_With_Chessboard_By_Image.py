@@ -4,7 +4,7 @@ import glob
 import os
 import matplotlib.pyplot as plt
 import configparser
-from _00_Camera_Calibration_Modules import save_camera_config
+from Additional._00_Camera_Calibration_Modules import save_camera_config
 
 def calibrate(ShowPics=True):
     #ReadImage
@@ -50,7 +50,7 @@ def calibrate(ShowPics=True):
 
     #Save Calibration Parameters
     curFolder = os.path.dirname(os.path.abspath(__file__))
-    paramPath = os.path.join(curFolder,"config.cfg")
+    paramPath = os.path.join(curFolder,"Additional\\config.cfg")
 
     save_camera_config(paramPath,camMatrix,distCoeff)
 

@@ -4,7 +4,7 @@ import io
 import os
 import cv2 as cv
 import matplotlib.pyplot as plt
-from _00_Camera_Calibration_Modules import load_camera_config
+from Additional._00_Camera_Calibration_Modules import load_camera_config
 
 
 def RemoveDistotion(camMatirx, dist_Coeff,Camera_Index=0):
@@ -35,7 +35,7 @@ def RemoveDistotion(camMatirx, dist_Coeff,Camera_Index=0):
 
 def RunRemoveDistotion():
     curFolder = os.path.dirname(os.path.abspath(__file__))
-    paramPath = os.path.join(curFolder,"config.cfg")
+    paramPath = os.path.join(curFolder,"Additional\\config.cfg")
 
     CamMatrix, dist_Coeff = load_camera_config(paramPath)
     print(CamMatrix)
