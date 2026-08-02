@@ -5,7 +5,7 @@
 ---
 
 ## 🗓️ About This README
-Today is **"sunday-june 21,2026 (1405/03/31)"**,<br>two amir (Amir Mohammad and Amir mmd) decided to write this text for keepsake...... :)
+Today is **"sunday-june 21,2026 (1405/03/31)"**,<br>two amir (Amir Mohammad and Amir mmd) decided to write this text for keepsake... :)
 
 ---
 
