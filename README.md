@@ -112,7 +112,7 @@ Surface Profile
 - Automatic calibration
 - Noise reduction
 - GPU acceleration
-- Higher measurement accuracy
+- Higher measurement accuracy 
 
 ## 👨‍💻 Author
 
