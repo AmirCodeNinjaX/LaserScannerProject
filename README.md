@@ -114,9 +114,10 @@ Surface Profile
 - GPU acceleration
 - Higher measurement accuracy 
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
-**Amir Mohammadi**
+**Amir Mohammadi** == <Hoodie-Boy>
+**Amir AbolHasani**== <AmirCodeNinjaX>
 
 Electrical Engineer | Embedded Systems | Computer Vision | DevOps | Cybersecurity
 
