@@ -116,8 +116,8 @@ Surface Profile
 
 ## 👨‍💻 Authors
 
-**Amir Mohammadi (Hoodie-Boy)**
-**Amir AbolHasani (AmirCodeNinjaX)**
+Amir Mohammadi (Hoodie-Boy)
+Amir AbolHasani (AmirCodeNinjaX)
 
 Electrical Engineer | Embedded Systems | Computer Vision | DevOps | Cybersecurity
 
